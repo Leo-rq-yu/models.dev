@@ -7,6 +7,7 @@
 # Mid-conversation (Converse): AWS documents system-role messages and tool changes for Claude only (https://docs.aws.amazon.com/bedrock/latest/userguide/claude-messages-mid-conversation-system.html); live 2026-10-19 this model rejects them ("This model doesn't support system messages"). No per-turn effort on Converse.
 schema = 2
 base_model = "deepseek/deepseek-v3.2"
+structured_output = true
 last_updated = "2026-02-06"
 
 [capabilities]

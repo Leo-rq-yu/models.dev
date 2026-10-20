@@ -8,6 +8,7 @@
 # Served by deepseek-flash; Chat API max_tokens <= 393216:
 # https://api-docs.deepseek.com/api/create-chat-completion/
 base_model = "deepseek/deepseek-v4.1-flash-1017"
+structured_output = true
 name = "DeepSeek V4 Flash Vision Exp"
 status = "deprecated"
 [[reasoning_options]]
