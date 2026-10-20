@@ -1,24 +1,28 @@
 # Public code-agent benchmarks use DeepSeek Harness minimal mode, max effort, temperature=1.0, top_p=0.95.
 # https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813
+schema = 2
 name = "DeepSeek V4 Pro 0813"
 description = "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes"
 family = "deepseek-thinking"
+open_weights = true
 release_date = "2026-08-12"
 last_updated = "2026-08-22"
-attachment = false
-reasoning = true
-temperature = true
-tool_call = true
-open_weights = true
 license = "MIT"
-
-[limit]
-context = 1_000_000
-output = 384_000
 
 [modalities]
 input = ["text"]
 output = ["text"]
+
+[capabilities]
+tools = { supported = true }
+reasoning = { supported = true }
+temperature = true
+top_p = true
+top_k = true
+
+[limit]
+context = 1_000_000
+output = 384_000
 
 [[weights]]
 label = "Hugging Face"
