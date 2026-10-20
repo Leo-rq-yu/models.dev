@@ -272,7 +272,7 @@ Do **not** invent a universal `low`/`medium`/`high` for every reasoner.
 2. Author **that** effort list (and toggle/budget if those entries have them and this host exposes the same kind of control).
 3. Common cases:
    - GPT-style on relays → often `low` / `medium` / `high` (add `none` / `xhigh` only if native/peers have them)
-   - DeepSeek V4 → `toggle` + `high` / `max` (not L/M/H; lab maps low/medium→high)
+   - DeepSeek V4 → `toggle` + `low` / `high` / `max` (no `medium`; the lab maps minimal→low and medium/xhigh→high)
    - Always-on / no control → `[]`
 4. On relays: **do not** use `[]` just because you could not re-test this host. Empty means **no caller control**, not uncertainty.
 5. Never invent `budget_tokens` unless this host (or the lab API it clearly proxies) has a real **reasoning** budget field. Not `max_tokens`.
@@ -291,11 +291,11 @@ Every `toggle` needs a **leading top-of-file comment** with the exact wire path 
 
 ```toml
 # Toggle: thinking.type = enabled|disabled
-# Effort: reasoning_effort = high|max
+# Effort: reasoning_effort = low|high|max
 name = "DeepSeek V4 Pro"
 reasoning_options = [
   { type = "toggle" },
-  { type = "effort", values = ["high", "max"] },
+  { type = "effort", values = ["low", "high", "max"] },
 ]
 ```
 
