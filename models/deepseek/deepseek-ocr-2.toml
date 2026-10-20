@@ -5,6 +5,7 @@ last_updated = "2026-01-27"
 attachment = true
 reasoning = false
 tool_call = false
+temperature = true
 open_weights = true
 
 [limit]
