@@ -1,3 +1,8 @@
+# Sources:
+# - Release: https://huggingface.co/moonshotai/Kimi-K2.7-Code, https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart
+# - Input formats: https://platform.kimi.ai/docs/guide/use-kimi-vision-model (image/video MIME lists)
+# Sampling: Moonshot fixes temperature (1.0) and top_p (0.95) for this model and documents no top_k
+# (https://platform.kimi.ai/docs/api/models-overview); the lab keeps all three off.
 schema = 2
 name = "Kimi K2.7 Code"
 description = "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking"
@@ -7,7 +12,25 @@ knowledge = "2025-01"
 release_date = "2026-06-12"
 
 [modalities]
-input = ["text", "image", "video"]
+input = [
+  "text",
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/webp",
+  "image/bmp",
+  "image/heic",
+  "image/heif",
+  "video/mp4",
+  "video/mpeg",
+  "video/mov",
+  "video/avi",
+  "video/x-flv",
+  "video/mpg",
+  "video/webm",
+  "video/wmv",
+  "video/3gpp",
+]
 output = ["text"]
 
 [capabilities]

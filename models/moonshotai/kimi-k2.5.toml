@@ -1,10 +1,13 @@
+# Sources:
+# - Release (2026-01-27): https://www.kimi.ai/blog/kimi-k2-5, https://techcrunch.com/2026/01/27/chinas-moonshot-releases-a-new-open-source-model-kimi-k2-5-and-a-coding-agent/
+# - Retired on the Kimi API 2026-08-31: https://platform.kimi.ai/docs/models
 schema = 2
 name = "Kimi K2.5"
 description = "Earlier Kimi frontier model for long-context agents, coding, and multimodal work"
 family = "kimi-k2"
 open_weights = true
 knowledge = "2025-01"
-release_date = "2026-01"
+release_date = "2026-01-27"
 
 [modalities]
 input = ["text", "image", "video"]
