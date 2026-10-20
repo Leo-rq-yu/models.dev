@@ -9,12 +9,14 @@
 #   Toggle: thinking.type = enabled|disabled (default enabled)
 #   Effort: reasoning_effort = low|high|max (default high; minimal->low, medium/xhigh->high;
 #   `none` is also accepted and disables thinking). Anthropic format: output_config.effort.
+#   `low` is a distinct level, not mapped to high: the thinking_mode mapping table lists low->low,
+#   the 2026-08-13 changelog introduces "three thinking effort levels: low / high / max"
+#   (https://api-docs.deepseek.com/updates/#date-2026-08-13), and GET /models reports
+#   effort.supported_levels = [low, high, max] for both models.
 # - Chat Completions params (max_tokens <= 393216, stream_options.include_usage, no top_k):
 #   https://api-docs.deepseek.com/api/create-chat-completion
 # - Context caching (automatic disk cache, no write price, no TTL): https://api-docs.deepseek.com/guides/kv_cache
 # - GET /models reports context_window 1048576 and max_output_tokens 393216.
-# - Vision limits (48 MiB body, 32 MiB per inline image, 600 images, 8192 px per side; 4096 px
-#   with 15+ images): https://api-docs.deepseek.com/guides/vision
 # Mid-conversation: system messages can be inserted mid-conversation on Chat Completions
 # (https://api-docs.deepseek.com/guides/tool_calls#inserting-tool-calls-mid-conversation); GET /models
 # reports system_prompt_update = "in-history" and a late system message keeps the cache (checked live).
@@ -38,8 +40,6 @@ cache = { supported = true, implicit = true, explicit = false }
 [limit]
 context = 1_048_576
 output = 393_216
-request_bytes = 50_331_648
-image = { max_per_request = 600, max_bytes = 33_554_432, max_width = 8_192, max_height = 8_192 }
 
 [api.chat-completions]
 compatibility = { reasoning_field = "reasoning_content" }

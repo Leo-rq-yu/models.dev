@@ -9,6 +9,10 @@
 #   Toggle: thinking.type = enabled|disabled (default enabled)
 #   Effort: reasoning_effort = low|high|max (default high; minimal->low, medium/xhigh->high;
 #   `none` is also accepted and disables thinking). Anthropic format: output_config.effort.
+#   `low` is a distinct level, not mapped to high: the thinking_mode mapping table lists low->low,
+#   the 2026-08-13 changelog introduces "three thinking effort levels: low / high / max"
+#   (https://api-docs.deepseek.com/updates/#date-2026-08-13), and GET /models reports
+#   effort.supported_levels = [low, high, max] for both models.
 # - Chat Completions params (max_tokens <= 393216, stream_options.include_usage, no top_k):
 #   https://api-docs.deepseek.com/api/create-chat-completion
 # - Context caching (automatic disk cache, no write price, no TTL): https://api-docs.deepseek.com/guides/kv_cache
