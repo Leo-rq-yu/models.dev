@@ -1,3 +1,4 @@
+# Off is reasoning_effort=none
 base_model = "openai/gpt-6-sol"
 structured_output = true
 reasoning_options = [{ type = "effort", values = ["none", "low", "medium", "high", "xhigh", "max"] }]
