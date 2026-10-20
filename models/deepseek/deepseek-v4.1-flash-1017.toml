@@ -2,6 +2,7 @@
 # Release date, API capabilities, and limits: https://api-docs.deepseek.com/updates/
 # https://api-docs.deepseek.com/quick_start/pricing/ (accessed 2026-10-17)
 # Benchmark harnesses are recorded only where the release explicitly specifies them.
+# Image formats (JPEG, PNG, GIF, WebP): https://api-docs.deepseek.com/guides/vision (accessed 2026-10-19)
 schema = 2
 name = "DeepSeek V4.1 Flash 1017"
 description = "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding"
@@ -12,7 +13,7 @@ release_date = "2026-10-17"
 license = "MIT"
 
 [modalities]
-input = ["text", "image"]
+input = ["text", "image/jpeg", "image/png", "image/gif", "image/webp"]
 output = ["text"]
 
 [capabilities]
