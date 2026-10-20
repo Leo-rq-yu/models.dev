@@ -1,4 +1,7 @@
+# Reasoning is a deadline, not an effort: `reasoning = { mode = "on" | "off" | "auto", budget_ms = 0..600000 }`.
+# https://respan.ai/docs/documentation/span-02/concept#anytime-reasoning
 base_model = "respan/span-02"
+reasoning_options = [{ type = "toggle" }]
 
 [cost]
 input = 0.01
