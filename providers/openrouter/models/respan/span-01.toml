@@ -1,4 +1,6 @@
 # https://openrouter.ai/api/v1/models?output_modalities=text,decisions
+# supported_parameters is [] for this ID on /api/v1/models?output_modalities=text,decisions (2026-10-20).
+structured_output = false
 base_model = "respan/span-01"
 
 [cost]

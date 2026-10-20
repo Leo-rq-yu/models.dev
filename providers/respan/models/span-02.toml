@@ -1,4 +1,6 @@
-# Reasoning is a deadline, not an effort: `reasoning = { mode = "on" | "off" | "auto", budget_ms = 0..600000 }`.
+# Toggle: reasoning.mode = "on" | "off" (binary caller control). Unset means "auto",
+# the host default: span-02 thinks only when unsure. reasoning.budget_ms (0..600000,
+# a wall-clock deadline) has no models.dev option type and is documented here only.
 # https://respan.ai/docs/documentation/span-02/concept#anytime-reasoning
 base_model = "respan/span-02"
 reasoning_options = [{ type = "toggle" }]

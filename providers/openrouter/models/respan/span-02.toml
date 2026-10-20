@@ -1,5 +1,7 @@
 # https://openrouter.ai/api/v1/models?output_modalities=text,decisions
 # OpenRouter advertises no reasoning parameters or generated decision output tokens.
+# supported_parameters is [] for this ID on /api/v1/models?output_modalities=text,decisions (2026-10-20).
+structured_output = false
 base_model = "respan/span-02"
 reasoning = false
 
