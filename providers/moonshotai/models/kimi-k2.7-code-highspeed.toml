@@ -1,11 +1,17 @@
+schema = 2
 base_model = "moonshotai/kimi-k2.7-code"
 name = "Kimi K2.7 Code HighSpeed"
-reasoning_options = []
 
-[interleaved]
-field = "reasoning_content"
+[capabilities]
+reasoning = { supported = true }
+structured_output = true
 
-[cost]
-input = 1.90
-output = 8.0
-cache_read = 0.38
+[api.chat-completions]
+compatibility = { reasoning_field = "reasoning_content" }
+
+[cost.text.input]
+price = 1.9
+cache = { read = 0.38 }
+
+[cost.text.output]
+price = 8

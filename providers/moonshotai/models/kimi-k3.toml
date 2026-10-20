@@ -6,20 +6,22 @@
 # $6.00 for the 1h TTL; cache_write uses the default 5min price.
 # Chat API max_completion_tokens can be set up to 1048576 for Kimi K3:
 # https://platform.kimi.ai/docs/api/chat
+schema = 2
 base_model = "moonshotai/kimi-k3"
 
-[[reasoning_options]]
-type = "effort"
-values = ["low", "high", "max"]
-
-[interleaved]
-field = "reasoning_content"
-
-[cost]
-input = 3.0
-output = 15.0
-cache_read = 0.3
-cache_write = 3.0
+[capabilities]
+reasoning = { supported = true, effort = ["low", "high", "max"] }
+structured_output = true
 
 [limit]
 output = 1_048_576
+
+[api.chat-completions]
+compatibility = { reasoning_field = "reasoning_content" }
+
+[cost.text.input]
+price = 3
+cache = { read = 0.3, write = 3 }
+
+[cost.text.output]
+price = 15
