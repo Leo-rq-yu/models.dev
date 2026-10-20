@@ -1,11 +1,13 @@
+# Model availability: listed in the China Token Plan Team supported-models table
+# and discovered on China Team (2026-10-20); also discovered on Global Personal
+# and Global Team. Previously subscription-console only with POST
+# /chat/completions accepted but GET /models absent (checked 2026-10-19).
 # Reasoning HTTP format (accessed 2026-10-19):
 # Toggle: enable_thinking = true|false. Chat Completions `reasoning_effort`
 # accepts low, high (default), and max; medium and xhigh map to high.
 # Reasoning streams on `reasoning_content`.
-# Model availability: listed in the Token Plan subscription console for the
-# China (Beijing) endpoint. POST /chat/completions accepts this id, but
-# GET /models does not return it (checked 2026-10-19).
 # Sources:
+# https://platform.qianwenai.com/docs/token-plan/team/token-plan-team-overview
 # https://platform.qianwenai.com/docs/api-reference/chat/openai-chat
 # https://help.aliyun.com/zh/model-studio/token-plan-personal-overview
 base_model = "deepseek/deepseek-v4.1-flash-1017"

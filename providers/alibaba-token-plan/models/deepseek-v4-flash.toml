@@ -1,4 +1,11 @@
+# Deprecated on Alibaba Token Plan (Global): absent from the exact-string
+# supported-models allowlist on 2026-10-20; use deepseek-v4.1-flash-1017 or
+# deepseek-v4-flash-0731.
+# Sources:
+# https://docs.qwencloud.com/token-plan/team/token-plan-team-overview
+# https://docs.qwencloud.com/api-reference/chat/openai-chat
 base_model = "deepseek/deepseek-v4-flash"
+status = "deprecated"
 # Reasoning HTTP format (accessed 2026-06-25):
 # This model toggles with `enable_thinking`: true or false. Chat Completions
 # `reasoning_effort` accepts high (default) or max; low/medium map to high and
