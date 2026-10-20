@@ -1,0 +1,5 @@
+base_model = "respan/span-02"
+
+[cost]
+input = 0.01
+output = 0.00
