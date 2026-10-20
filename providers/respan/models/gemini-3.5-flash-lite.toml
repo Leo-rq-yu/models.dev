@@ -5,3 +5,4 @@ reasoning_options = [{ type = "effort", values = ["minimal", "low", "medium", "h
 [cost]
 input = 0.3
 output = 2.5
+cache_read = 0.03

@@ -6,3 +6,4 @@ reasoning_options = [{ type = "effort", values = ["low", "high", "max"] }]
 [cost]
 input = 0.73
 output = 10.00
+cache_read = 0.55
